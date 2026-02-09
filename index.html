@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portfolio of Jitesh Choudhary - Computer Science Student specialized in Cloud, AI, and Software Development.">
+    <title>Jitesh Choudhary | CS Student & Cloud Enthusiast</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+    <!-- Loading Screen -->
+    <div id="loader">
+        <div class="loader-content">
+            <div class="spinner"></div>
+            <p class="loading-text">Initializing Systems...</p>
+        </div>
+    </div>
+
+    <!-- Background Canvas for Three.js -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Neural Network Canvas -->
+    <canvas id="neural-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar glass-panel">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <div class="hex-inner"></div>
+                </div>
+                Jitesh<span class="accent">.</span>
+            </a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <h2 class="greeting">Hello, I'm</h2>
+                    <h1 class="hero-name glitch" data-text="Jitesh Choudhary">Jitesh Choudhary</h1>
+                    <h3 class="hero-title">Computer Science Student</h3>
+                    <p class="hero-subtitle">Focusing on Cloud Computing (AWS/Azure) & Artificial Intelligence</p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary magnetic">View Work</a>
+                        <a href="#contact" class="btn btn-outline magnetic">Contact Me</a>
+                        <button id="download-resume" class="btn btn-text magnetic"><i class="fas fa-download"></i>
+                            Resume PDF</button>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <img src="103858211-removebg-preview.png" alt="Jitesh Choudhary" class="hero-image">
+                </div>
+            </div>
+            <div class="scroll-down">
+                <a href="#about">
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about-section">
+            <div class="container">
+                <h2 class="section-title" data-text="About Me">About Me</h2>
+                <div class="glass-card about-card" data-aos="fade-up">
+                    <div class="about-content">
+                        <p>
+                            I am a motivated Computer Science student at Lovely Professional University with a strong
+                            interest in cloud computing, artificial intelligence, and modern software development. My
+                            journey is driven by a passion for solving complex problems and creating efficient, scalable
+                            solutions.
+                        </p>
+                        <p>
+                            With a problem-solving mindset and a commitment to continuous learning, I actively work on
+                            real-world projects using emerging technologies. I enjoy bridging the gap between
+                            theoretical concepts and practical applications, whether it's analyzing data patterns with
+                            AI or deploying applications on the cloud.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section skills-section">
+            <div class="container">
+                <h2 class="section-title" data-text="Technical Skills">Technical Skills</h2>
+
+                <div class="skills-grid">
+                    <!-- Programming Languages -->
+                    <div class="glass-card skill-category" data-aos="fade-up" data-aos-delay="100">
+                        <h3><i class="fas fa-code accent-icon"></i> Programming Languages</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">C</span>
+                            <span class="skill-tag">C++</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">JavaScript</span>
+                        </div>
+                    </div>
+
+                    <!-- Web Technologies -->
+                    <div class="glass-card skill-category" data-aos="fade-up" data-aos-delay="200">
+                        <h3><i class="fas fa-globe accent-icon"></i> Web Technologies</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">JavaScript</span>
+                        </div>
+                    </div>
+
+                    <!-- Computer Science -->
+                    <div class="glass-card skill-category" data-aos="fade-up" data-aos-delay="300">
+                        <h3><i class="fas fa-microchip accent-icon"></i> Computer Science</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Data Structures</span>
+                            <span class="skill-tag">Algorithms</span>
+                            <span class="skill-tag">Operating Systems</span>
+                        </div>
+                    </div>
+
+                    <!-- Tools & Platforms -->
+                    <div class="glass-card skill-category" data-aos="fade-up" data-aos-delay="400">
+                        <h3><i class="fas fa-tools accent-icon"></i> Tools & Platforms</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Linux / Ubuntu</span>
+                            <span class="skill-tag">Unity</span>
+                            <span class="skill-tag">Blender</span>
+                            <span class="skill-tag">Photoshop</span>
+                            <span class="skill-tag">Illustrator</span>
+                            <span class="skill-tag">Figma</span>
+                            <span class="skill-tag">Canva</span>
+                        </div>
+                    </div>
+
+                    <!-- Cloud & AI -->
+                    <div class="glass-card skill-category" data-aos="fade-up" data-aos-delay="500">
+                        <h3><i class="fas fa-cloud accent-icon"></i> Cloud & AI</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">Azure</span>
+                            <span class="skill-tag">Artificial Intelligence</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section projects-section">
+            <div class="container">
+                <h2 class="section-title" data-text="Featured Projects">Featured Projects</h2>
+
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="glass-card project-card" data-aos="fade-up">
+                        <div class="project-content">
+                            <h3 class="project-title">Particle Gesture System</h3>
+                            <p class="project-desc">
+                                A fun interactive web application that uses the device camera to track hand gestures and
+                                respond visually by drawing shapes, zooming in and out, and manipulating particles in
+                                real time.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">AI / Computer Vision</span>
+                                <span class="tech-tag">Three.js</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-sm btn-outline magnetic">View Demo</a>
+                                <a href="#" class="btn btn-sm btn-text magnetic"><i class="fab fa-github"></i> Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="glass-card project-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="project-content">
+                            <h3 class="project-title">InfoGuardAI</h3>
+                            <p class="project-desc">
+                                A web-based misinformation detection and analysis system that evaluates text input for
+                                coordinated misinformation patterns, emotional manipulation, and credibility indicators.
+                                It presents analysis reports and visualizations.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">AI / ML Concepts</span>
+                                <span class="tech-tag">Data Vis</span>
+                                <span class="tech-tag">UI/UX</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-sm btn-outline magnetic">View Demo</a>
+                                <a href="#" class="btn btn-sm btn-text magnetic"><i class="fab fa-github"></i> Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="section achievements-section">
+            <div class="container">
+                <h2 class="section-title" data-text="Achievements">Achievements & Certifications</h2>
+                <div class="achievements-grid">
+                    <div class="glass-card achievement-card" data-aos="fade-up">
+                        <div class="achievement-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="achievement-info">
+                            <h3>Artificial Intelligence</h3>
+                            <p>Completed comprehensive course on AI fundamentals and applications.</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card achievement-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="achievement-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="achievement-info">
+                            <h3>Machine Learning & Deep Learning</h3>
+                            <p>Specialized training in ML algorithms and neural networks.</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card achievement-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="achievement-icon">
+                            <i class="fas fa-link"></i>
+                        </div>
+                        <div class="achievement-info">
+                            <h3>Blockchain & Web3</h3>
+                            <p>Certification in decentralized technologies and smart contracts.</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card achievement-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="achievement-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <div class="achievement-info">
+                            <h3>Cloud Computing & Microservices</h3>
+                            <p>Expertise in cloud architecture and microservices deployment.</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card achievement-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="achievement-icon">
+                            <i class="fas fa-code-branch"></i>
+                        </div>
+                        <div class="achievement-info">
+                            <h3>Algorithms</h3>
+                            <p>Advanced study of efficient algorithm design and analysis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <h2 class="section-title" data-text="Get In Touch">Get In Touch</h2>
+                <div class="glass-card contact-wrapper" data-aos="fade-up">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3>Email</h3>
+                                <a href="mailto:cjitesh775@gmail.com">cjitesh775@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            <div>
+                                <h3>LinkedIn</h3>
+                                <a href="https://linkedin.com/in/jitesh0021"
+                                    target="_blank">linkedin.com/in/jitesh0021</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-github"></i>
+                            <div>
+                                <h3>GitHub</h3>
+                                <a href="https://github.com/Jitesh0021" target="_blank">github.com/Jitesh0021</a>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Name" required class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email" required class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Message" rows="5" required class="form-input"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary magnetic">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- AI Chatbot -->
+    <div id="chatbot-container">
+        <div class="chat-header">
+            <div class="chat-title">
+                <i class="fas fa-robot"></i> Ask Jitesh AI
+            </div>
+            <button id="close-chat"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <div class="message bot-message">
+                Hello! I'm Jitesh's AI assistant. Ask me about his skills, projects, or how to contact him!
+            </div>
+            <div class="suggestion-chips">
+                <button class="chip" onclick="sendSuggestion('What are your skills?')">Skills</button>
+                <button class="chip" onclick="sendSuggestion('Show me projects')">Projects</button>
+                <button class="chip" onclick="sendSuggestion('Contact info')">Contact</button>
+            </div>
+        </div>
+        <div class="chat-input-area">
+            <input type="text" id="chat-input" placeholder="Ask a question...">
+            <button id="send-btn"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <button id="chat-toggle-btn">
+        <i class="fas fa-comment-dots"></i>
+    </button>
+
+    <!-- PDF Resume Content (Hidden) -->
+    <div id="resume-print-content" style="display: none;">
+        <div class="resume-header">
+            <h1>Jitesh Choudhary</h1>
+            <h3>Computer Science Student | Cloud & AI</h3>
+            <p>cjitesh775@gmail.com | linkedin.com/in/jitesh0021 | github.com/Jitesh0021</p>
+        </div>
+        <div class="resume-section">
+            <h4>Summary</h4>
+            <p id="print-summary"></p>
+        </div>
+        <div class="resume-section">
+            <h4>Technical Skills</h4>
+            <div id="print-skills"></div>
+        </div>
+        <div class="resume-section">
+            <h4>Projects</h4>
+            <div id="print-projects"></div>
+        </div>
+        <div class="resume-section">
+            <h4>Education & Achievements</h4>
+            <div id="print-achievements"></div>
+        </div>
+    </div>
+
+    <!-- Analytics Dashboard (Hidden) -->
+    <div id="analytics-dashboard" class="glass-panel">
+        <div class="dashboard-header">
+            <h3>Visitor Analytics</h3>
+            <button id="close-dashboard"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="dashboard-stats">
+            <div class="stat-card">
+                <h4>Total Visitors</h4>
+                <p id="total-visitors">0</p>
+            </div>
+            <div class="stat-card">
+                <h4>Resume Downloads</h4>
+                <p id="total-downloads">0</p>
+            </div>
+        </div>
+        <div class="dashboard-charts">
+            <h4>Section Views</h4>
+            <div id="views-chart">
+                <!-- Bars will be injected here -->
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Jitesh Choudhary. Designed with AI & passion.</p>
+            <button id="admin-trigger"
+                style="background:none; border:none; color: rgba(255,255,255,0.1); cursor: pointer; font-size: 0.8rem;">Admin</button>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- html2pdf.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <!-- Three.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
